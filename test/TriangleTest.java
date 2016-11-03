@@ -69,12 +69,12 @@ public class TriangleTest {
     		testTriangleB.setSideB(4);
     		testTriangleB.setSideC(4);
     		
-    		TreeMap<String, Triangle> triangleSet = new TreeMap<String, Triangle>();
+    		TreeMap<String, Triangle> triangleMap = new TreeMap<String, Triangle>();
     		
-    		triangleSet.put("1", testTriangleA);
-    		triangleSet.put("2", testTriangleB);
+    		triangleMap.put("1", testTriangleA);
+    		triangleMap.put("2", testTriangleB);
     		
-    		TreeMap<String, Triangle> trianglesWithTypes = testTriangle.getMultipleTriangleTypes(triangleSet);
+    		TreeMap<String, Triangle> trianglesWithTypes = testTriangle.getMultipleTriangleTypes(triangleMap);
             // assert statement
     		assertEquals(trianglesWithTypes.get("1").getTriangleType(), TriangleType.ISOSCELES);
             assertEquals(trianglesWithTypes.get("2").getTriangleType(), TriangleType.EQUILATERAL);        
