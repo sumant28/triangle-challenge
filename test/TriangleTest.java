@@ -1,67 +1,63 @@
-import static org.junit.Assert.*;
 import java.util.TreeMap;
+import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 
 public class TriangleTest {
 
+	Triangle testTriangle;
+	
+	@Before
+    public void before() {
+ 
+        testTriangle = new Triangle();
+    }
+	
     @Test
     public void testOneNegativeSideOfTrianlge() {
-            
-    		Triangle tester = new Triangle();
-    		
+                		
             // assert statement
-            assertEquals(tester.getTriangleType(-2, 2, 3), TriangleType.INVALID);            
+            assertEquals(testTriangle.getTriangleType(-2, 2, 3), TriangleType.INVALID);            
     }
     
     @Test
     public void testMultipleNegativeSidesOfTrianlge() {
-            
-    		Triangle tester = new Triangle();
-    		
+                		
             // assert statement
-            assertEquals(tester.getTriangleType(2, -2, -3), TriangleType.INVALID);            
+            assertEquals(testTriangle.getTriangleType(2, -2, -3), TriangleType.INVALID);            
     }
 
     @Test
     public void testTriangleInequality() {
-            
-    		Triangle tester = new Triangle();
-    		
+                		
             // assert statement - 6 (sideA) > 2 (sideB) + 2 (sideC)
-            assertEquals(tester.getTriangleType(6, 2, 2), TriangleType.INVALID);            
+            assertEquals(testTriangle.getTriangleType(6, 2, 2), TriangleType.INVALID);            
     }
     
     @Test
     public void testEquilateralTriangle() {
-            
-    		Triangle tester = new Triangle();
-    		
+                		
             // assert statement
-            assertEquals(tester.getTriangleType(8, 8, 8), TriangleType.EQUILATERAL);            
+            assertEquals(testTriangle.getTriangleType(8, 8, 8), TriangleType.EQUILATERAL);            
     }
     
     @Test
     public void testIsoscelesTriangle() {
-            
-    		Triangle tester = new Triangle();
-    		
+                		
             // assert statement
-            assertEquals(tester.getTriangleType(8, 4, 8), TriangleType.ISOSCELES);            
+            assertEquals(testTriangle.getTriangleType(8, 4, 8), TriangleType.ISOSCELES);            
     }
     
     @Test
     public void testScaleneTriangle() {
-            
-    		Triangle tester = new Triangle();
-    		
+                		
             // assert statement
-            assertEquals(tester.getTriangleType(3, 4, 6), TriangleType.SCALENE);            
+            assertEquals(testTriangle.getTriangleType(3, 4, 6), TriangleType.SCALENE);            
     }
     
     @Test
     public void testMultipleTriangleTypes() {
             
-    		Triangle testTriangle = new Triangle();
     		Triangle testTriangleA = new Triangle();
     		Triangle testTriangleB = new Triangle();
     		

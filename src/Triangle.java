@@ -8,7 +8,11 @@ public class Triangle {
 	private double sideC;
 	private TriangleType triangleType;
 	
-	public void Triangle(double sideA, double sideB, double sideC) {
+	public Triangle() {
+
+	}
+	
+	public Triangle(double sideA, double sideB, double sideC) {
 
 		this.sideA = sideA;
 		this.sideB = sideB;
